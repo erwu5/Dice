@@ -7,20 +7,20 @@ void setup()
 void draw()
 {
   int total = 0;
-  for(int x= 9; x <390; x+=67)
+  for(int y= 9; y <390; y+=67)
   {
-    for(int y = 9; y <390; y+=65)
+    for(int x = 9; x <390; x+=65)
     {
 	   Die yay = new Die(x,y);
      yay.show();
      total += yay.num;
     }
   }
-  System.out.println(total);
+  noStroke();
+  fill(196,240,255);
+  rect(140, 395, 100, 100);
   fill(0);
   text("Sum of rolls: " + total, 145, 410); 
-  //fill(196,240,255);
-  rect(180, 420, 100, 100);
   
 }
 void mousePressed()
